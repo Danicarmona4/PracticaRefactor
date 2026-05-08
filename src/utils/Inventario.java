@@ -29,18 +29,17 @@ public class Inventario {
         return valorBase - descuentoAntiguedad - penalRot + bonifStock + ajusteCat;
     }
 
-    private static double calcularAjusteCategoria(String tipoCategoria, double valorBase) {
+    static double calcularAjusteCategoria(String tipoCategoria, double valorBase) {
         double ajusteCat = 0;
         if (tipoCategoria.equals("premium")) {
             ajusteCat = valorBase * PORCENTAJE_AJUSTE_PREMIUM;
         } else if (tipoCategoria.equals("basica")) {
-            // Se usa el valor de la constante que ya incluye el signo negativo
             ajusteCat = valorBase * PORCENTAJE_AJUSTE_BASICA;
         }
         return ajusteCat;
     }
 
-    private static double calcularBonificacionStock(int stockActual, double valorBase) {
+    public static double calcularBonificacionStock(int stockActual, double valorBase) {
         double bonifStock = 0;
         if (stockActual > LIMITE_STOCK_ALTO) {
             bonifStock = valorBase * PORCENTAJE_BONIFICACION_STOCK;
