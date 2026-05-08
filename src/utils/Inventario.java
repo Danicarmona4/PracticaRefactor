@@ -4,7 +4,7 @@ public class Inventario {
                                           int mC, int dV, int s, String tC) {
 // Cálculo del valor base del inventario
         double vB = nP * pU;
-// Descuento por antigüedad (si lleva más de 12 meses
+// Descuento por antigüedad (si llevás de 12 meses
 // en catálogo)
         double descAnt = 0;
         if (mC > 12) {
