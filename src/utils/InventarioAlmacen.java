@@ -1,6 +1,6 @@
 package utils;
 
-public class Inventario {
+public class InventarioAlmacen {
 
     // Constantes extraídas para eliminar números mágicos
     public static  int LIMITE_MESES_ANTIGUEDAD = 12;
